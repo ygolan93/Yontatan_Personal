@@ -422,22 +422,11 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-slate-300 mb-2">שם מלא</label>
-                            <input type="text" id="name" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-slate-300 mb-2">אימייל</label>
-                            <input type="email" id="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-slate-300 mb-2">הודעה</label>
-                            <textarea id="message" rows="5" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"></textarea>
-                        </div>
-                        
+                    <form  action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                          <input type="hidden" name="access_key" value="b05dd678-2d45-4e97-bcae-2d4c5180a3a3">
+                            <input type="text" placeholder="שם מלא" id="name" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">           
+                            <input type="email" placeholder="מייל" id="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
+                            <textarea placeholder="הודעה" id="message" rows="5" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"></textarea>
                         <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-3 px-6 rounded-lg transition flex items-center justify-center">
                             <i class="fas fa-paper-plane mr-2"></i> שלח הודעה
                         </button>
