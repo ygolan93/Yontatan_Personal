@@ -102,35 +102,34 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- Navigation -->
-    <nav class="bg-slate-900/80 backdrop-blur-md fixed w-full z-50 border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a href="#" class="text-2xl font-bold gradient-text">Yonatan Golan </a>
-                <div class="hidden md:flex space-x-6 space-x-reverse">
-                    <a href="#about" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_about"> אודות </a>
-                    <a href="#skills" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_skills"> כישורים </a>
-                    <a href="#projects" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_projects"> פרויקטים</a>
-                    <a href="#contact" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_contact"> יצירת קשר</a>
-                </div>
-                <button id="langToggle" class="text-slate-300 hover:text-white border border-slate-700 px-3 py-1 rounded-full text-sm transition"> EN </button>
-                <button class="md:hidden text-white">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+<!-- Navigation -->
+<nav class="fixed top-0 right-0 w-full z-[9999] sticky-top bg-slate-900/80 backdrop-blur-md border-b border-slate-800" dir="rtl">
+    <div class="max-w-6xl mx-auto px-4 relative">
+        <div class="flex justify-between items-center py-4">
+            <a href="#" class="text-2xl font-bold gradient-text">Yonatan Golan</a>
+            <div class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#about" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_about">אודות</a>
+                <a href="#skills" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_skills">כישורים</a>
+                <a href="#projects" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_projects">פרויקטים</a>
+                <a href="#contact" class="text-slate-300 hover:text-white transition mx-4" data-i18n="hero_contact">יצירת קשר</a>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden hidden bg-slate-900/90 backdrop-blur-md px-4 py-6 absolute top-full right-0 w-full border-t border-slate-800 z-50">
-        <a href="#about" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_about">אודות</a>
-        <a href="#skills" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_skills">כישורים</a>
-        <a href="#projects" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_projects">פרויקטים</a>
-        <a href="#contact" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_contact">יצירת קשר</a>
-        <button id="langToggleMobile" class="mt-4 text-slate-300 hover:text-white border border-slate-700 px-3 py-1 rounded-full text-sm transition w-full">
-            EN
-        </button>
+            <button id="langToggle" class="text-slate-300 hover:text-white border border-slate-700 px-3 py-1 rounded-full text-sm transition">EN</button>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
 
-    </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-slate-900/90 backdrop-blur-md px-4 py-6 absolute top-full right-0 w-full border-t border-slate-800 z-50">
+            <a href="#about" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_about">אודות</a>
+            <a href="#skills" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_skills">כישורים</a>
+            <a href="#projects" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_projects">פרויקטים</a>
+            <a href="#contact" class="block text-slate-300 hover:text-white py-2" data-i18n="hero_contact">יצירת קשר</a>
+            <button id="langToggleMobile" class="mt-4 text-slate-300 hover:text-white border border-slate-700 px-3 py-1 rounded-full text-sm transition w-full">EN</button>
+        </div>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-4">
@@ -187,7 +186,7 @@
                         <i class="fas fa-gamepad text-purple-400"></i>
                     </div>
                     <div>
-                        <h4 class="font-medium" data-i18n="about_game_dev">
+                        <h4 class="font-medium-reverse" data-i18n="about_game_dev">
                             פיתוח משחקים – Unity ו־C#
                         </h4>
                         <p class="text-slate-400" data-i18n="about_game_dev_description">פרויקטים עצמאיים וצוותיים</p>
@@ -240,7 +239,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 section">
+    <section id="skills" class="py-20 px-4 section" dir="rtl">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center gradient-text" data-i18n="skills_title">כישורים וטכנולוגיות</h2>
             
@@ -304,7 +303,7 @@
                 <div class="bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <i class="fas fa-gamepad text-purple-400 text-xl"></i>
                 </div>
-                <h4 class="font-medium text-center mb-2" data-i18n="what_i_bring_unity_title">Unity & C#</h4>
+                <h4 class="font-medium text-center mb-2"  dir="ltr">Unity & C#</h4>
                 <p class="text-slate-400 text-center text-sm" data-i18n="what_i_bring_unity_desc">
                     Developing gameplay logic and systems in Unity using modular design, events and clear architecture.
                 </p>
@@ -327,12 +326,12 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-slate-900/50 section">
+    <section id="projects" class="py-20 px-4 bg-slate-900/50 section" >
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center gradient-text" data-i18n="projects_title">פרויקטים</h2>
                         <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="game-dev-card rounded-xl p-6">
-                    <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4" data-no-translate dir="ltr">
                         <h3 class="text-xl font-semibold">AudioDojo 
                             <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-cyan-300">React</span>
                             <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-green-300">Node.js</span>
@@ -355,7 +354,7 @@
                 </div>
                 
                 <div class="game-dev-card rounded-xl p-6">
-                    <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4" data-no-translate dir="ltr">
                         <h3 class="text-xl font-semibold">LinguaSchedule
                         <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-cyan-300">React</span>
                         <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-blue-300">TypeScript</span>
@@ -378,7 +377,7 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="game-dev-card rounded-xl p-6">
-                    <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4" data-no-translate dir="ltr">
                         <h3 class="text-xl font-semibold">Beavermania
                         <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-sky-300">Unity</span>
                         <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-purple-300">C#</span>
@@ -401,7 +400,7 @@
                 
             <div class="bg-slate-800/30 rounded-xl p-6 border border-slate-700 w-full">
                 
-            <div class="flex items-center mb-4">
+            <div class="flex items-center mb-4" data-no-translate dir="ltr">
                 <h3 class="text-xl font-semibold"> To-do List</h3>
                 <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-cyan-300">React</span>
                 <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-green-300">Node.js</span>
@@ -433,7 +432,7 @@
                 
             <!-- Elemental Heroes -->
             <div class="bg-slate-800/30 rounded-xl p-6 border border-slate-700">
-                <h3 class="text-xl font-semibold mb-3">Elemental Heroes <span class="text-sm text-slate-400">(NDA)</span>
+                <h3 class="text-xl font-semibold mb-3" data-no-translate dir="ltr">Elemental Heroes <span class="text-sm text-slate-400">(NDA)</span>
                 <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-sky-300">Unity</span>
                 <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-purple-300">C#</span>
                 <span class="bg-slate-800 px-3 py-1 rounded-full text-xs text-amber-300">Blender</span>                 
@@ -592,7 +591,7 @@
                 what_i_bring_title: "שירותים שאני מציע",
                 what_i_bring_frontend_title: "פיתוח Frontend / Fullstack",
                 what_i_bring_frontend_desc: "פיתוח אפליקציות ווב מודרניות עם React ו-JavaScript, עם דגש על קוד נקי, ארכיטקטורה מודולרית וניהול state ברור.",
-                what_i_bring_unity_title: "פיתוח Unity ו־#C",
+                what_i_bring_unity_title: "פיתוח Unity ו־C#",
                 what_i_bring_unity_desc: "פיתוח לוגיקה ומערכות משחק ב־Unity תוך שימוש בארכיטקטורה מודולרית, אירועים וקוד מסודר שקל לתחזק.",
                 what_i_bring_problem_title: "פתרון בעיות",
                 what_i_bring_problem_desc: "יכולת חזקה לניתוח קוד קיים, הבנת מערכות מורכבות ומתן פתרונות יציבים וסקיילביליים.",
@@ -755,7 +754,6 @@
                         }
                     });
 
-
                     if (translations[lang][key]) {
                         el.innerHTML = translations[lang][key];
                     }
@@ -764,9 +762,15 @@
                 localStorage.setItem('lang', lang);
                 document.getElementById('langToggle').innerText = lang === 'he' ? 'EN' : 'HE';
                 if (document.getElementById('langToggleMobile')) {
-                 document.getElementById('langToggleMobile').innerText = lang === 'he' ? 'EN' : 'HE';
+                    document.getElementById('langToggleMobile').innerText = lang === 'he' ? 'EN' : 'HE';
                 }
 
+                // Add horizontal flip animation
+                document.body.style.transition = 'transform 0.1s';
+                document.body.style.transform = 'scaleX(0)';
+                setTimeout(() => {
+                    document.body.style.transform = 'scaleX(1)';
+                }, 50);
             }
 
         const observer = new IntersectionObserver((entries) => {
