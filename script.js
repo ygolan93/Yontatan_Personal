@@ -1,4 +1,4 @@
-        const scrollUpBtn = document.getElementById('scrollUpBtn');
+const scrollUpBtn = document.getElementById('scrollUpBtn');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -47,7 +47,7 @@
                 about_me: 'צורת עבודה וניסיון מקצועי',
                 about_me_paragraph_1:
                 'לצד כתיבת קוד אני יודע להבין מערכת, להסביר אותה לאחרים, ולבנות אותה נכון מהיסוד. ' +
-                'במהלך פרויקטים שפיתחתי עצמאית (ולעתים גם בשיתוף פעולה עם לקוח), שילבתי יכולות פיתוח עם תכנון מערכת, אפיון, תיעוד, ייצוא דוחות, ממשקים, ניהול state, ארכיטקטורה ועוד – גם כשלא הייתה לי היכרות מוקדמת עם התחום (כמו באודיו מקצועי).',
+                'במהלך פרויקטים שפיתחתי עצמאית (ולעתים גם בשיתוף פעולה עם לקוח), שילבתי יכולות פיתוח עם תכנון מערכת, אפיון, תיעוד, ייצוא דוחות, ממשקים, ניהול state, ארכיטקטורה ועוד – גם כשלא הייתה לי היכרות מוקדמת עם התחום.',
 
                 about_me_paragraph_2:
                 'לצד הפיתוח, עבדתי גם בהדרכה – מ־Unity ועד Kodu – מה שחידד את היכולת שלי לפשט מורכבויות, להסביר תהליכים ולבנות קוד יציב לאורך זמן. ' +
@@ -96,7 +96,7 @@
                 '(אש, מים, אדמה, אוויר) בארכיטקטורה מודולרית עם Events, Interfaces וסינרגיות בין אפקטים.',
 
                 projects_more_projects: 'עוד פרויקטים בתהליך פיתוח – בקרוב!',
-
+                download_cv_title: 'קורות חיים',
                 contact_title: 'יצירת קשר',
                 contact_placeholder_name: 'שם מלא',
                 contact_placeholder_email: 'אימייל',
@@ -189,7 +189,7 @@
                 '(fire, water, earth, air) using Events, Interfaces, and effect synergies.',
 
                 projects_more_projects: 'More projects currently in development – coming soon!',
-
+                download_cv_title: 'Download CV',
                 contact_title: 'Contact',
                 contact_placeholder_name: 'Full Name',
                 contact_placeholder_email: 'Email',
@@ -198,6 +198,17 @@
             }
             };
 
+            function toggleCVButtons(lang) {
+                document.querySelectorAll('[data-lang]').forEach(button => {
+                    if (button.getAttribute('data-lang') === lang) {
+                        button.classList.remove('hidden');
+                    } else {
+                        button.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Update the setLanguage function to include the toggleCVButtons call
             function setLanguage(lang) {
                 document.documentElement.lang = lang;
                 document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
@@ -231,6 +242,9 @@
                 setTimeout(() => {
                     document.body.style.transform = 'scaleX(1)';
                 }, 50);
+
+                // Call the toggleCVButtons function
+                toggleCVButtons(lang);
             }
 
         const observer = new IntersectionObserver((entries) => {
