@@ -84,3 +84,17 @@ html, body {
             background-clip: text;
             color: transparent;
         }
+
+        #mobileMenu {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-8px);
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        #mobileMenu.is-open {
+            max-height: 70vh;
+            opacity: 1;
+            transform: translateY(0);
+        }

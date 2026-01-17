@@ -252,11 +252,34 @@ sections.forEach(section => {
 });
 
 const mobileMenu = document.getElementById('mobileMenu');
-const mobileToggleBtn = document.querySelector('button.md\\:hidden');
+const mobileToggleBtn = document.getElementById('mobileMenuToggle');
+let mobileMenuCloseTimer;
 
-mobileToggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+if (mobileMenu && mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+
+        if (isHidden) {
+            if (mobileMenuCloseTimer) {
+                clearTimeout(mobileMenuCloseTimer);
+                mobileMenuCloseTimer = null;
+            }
+
+            mobileMenu.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                mobileMenu.classList.add('is-open');
+                mobileToggleBtn.setAttribute('aria-expanded', 'true');
+            });
+            return;
+        }
+
+        mobileMenu.classList.remove('is-open');
+        mobileToggleBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuCloseTimer = window.setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300);
+    });
+}
 
 document.getElementById('langToggleMobile').addEventListener('click', () => {
     const currentLang = document.documentElement.lang;
