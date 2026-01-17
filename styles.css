@@ -5,6 +5,12 @@ html, body {
 
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
         
+
+
+        
+:root {
+    --accent-border-color: rgba(34, 211, 238, 0.7);
+}
         body {
             font-family: 'Rubik', sans-serif;
             background-color: #0f172a;
@@ -13,7 +19,7 @@ html, body {
         }
         
         .profile-img {
-            border: 4px solid #38bdf8;
+            border: 4px solid var(--accent-border-color);
             box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.3),
                         0 0 30px rgba(56, 189, 248, 0.5);
             transition: all 0.3s ease;
@@ -41,18 +47,39 @@ html, body {
         
         .game-dev-card {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #334155;
+            border: 1px solid var(--accent-border-color);
             transition: all 0.3s ease;
         }
         
         .game-dev-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            border-color: #38bdf8;
+            border-color: var(--accent-border-color);
+        }
+
+        .lang-glow:hover,
+        button:hover {
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.9), 0 0 18px rgba(34, 211, 238, 0.65);
+        }
+
+        .lang-glow:active,
+        button:active {
+            box-shadow: 0 0 6px rgba(34, 211, 238, 1), 0 0 12px rgba(34, 211, 238, 0.85);
+            transform: translateY(1px);
+        }
+
+        .border,
+        .border-t,
+        .border-b,
+        .border-l,
+        .border-r {
+            border-color: var(--accent-border-color) !important;
         }
         
-        .gradient-text {
-            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+        .name-text {
+            background: linear-gradient(45deg, #000000, #2a648a, #01eeff);
+            text-shadow: #2affed7e 0 0 0.01px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
