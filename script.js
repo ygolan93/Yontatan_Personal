@@ -68,6 +68,10 @@ const translations = {
         'המערכת פותחה ב־React ו־TypeScript עם Tailwind, לוגיקת זמן אמת ומניעת התנגשויות, ' +
         'ונועדה להחליף את הפלטפורמה הקיימת של Jerusalem Post LiteTalk.',
 
+        projects_litetalk_description:
+        '\u05DB\u05DC\u05D9 \u05D0\u05D5\u05D8\u05D5\u05DE\u05E6\u05D9\u05D4 \u05DC\u05E0\u05D9\u05D4\u05D5\u05DC \u05DC\u05D5\u05D7\u05D5\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD \u05DE\u05E7\u05D1\u05E6\u05D9 Excel \u05DC\u05EA\u05E6\u05D5\u05D2\u05EA RTL \u05E2\u05DD \u05E1\u05D9\u05E0\u05D5\u05DF \u05DB\u05DC\u05DC\u05D9 \u05E2\u05E1\u05E7 \u05D5\u05D9\u05D9\u05E6\u05D5\u05D0 PNG \u05DC-WhatsApp. ' +
+        '\u05D4\u05DE\u05E2\u05E8\u05DB\u05EA \u05DE\u05E2\u05D1\u05D3\u05EA \u05E0\u05EA\u05D5\u05E0\u05D9 \u05D2\u05D9\u05DC\u05D9\u05D5\u05DF, \u05D1\u05D5\u05D7\u05E8\u05EA \u05D0\u05EA \u05D4\u05E9\u05E2\u05D4 \u05D4\u05DE\u05D5\u05E7\u05D3\u05DE\u05EA \u05D1\u05DB\u05DC \u05EA\u05D0\u05E8\u05D9\u05DA, \u05D5\u05DE\u05E6\u05D9\u05D2\u05D4 \u05EA\u05E6\u05D5\u05D2\u05D4 \u05EA\u05E4\u05E2\u05D5\u05DC\u05D9\u05EA \u05E0\u05E7\u05D9\u05D9\u05D4 \u05D5\u05E0\u05D5\u05D7\u05D4 \u05DC\u05E9\u05D9\u05EA\u05D5\u05E3.',
+        projects_litetalk_cta: '\u05DC\u05E6\u05E4\u05D9\u05D9\u05D4 \u05D1\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8',
         projects_beavermania_description:
         'משחק Rogue-like שפיתחתי במסגרת פרויקט גמר בשנקר',
 
@@ -162,6 +166,10 @@ const translations = {
         'Built with React and TypeScript using Tailwind, with real-time logic and collision prevention, ' +
         'designed to replace the existing Jerusalem Post LiteTalk platform.',
 
+        projects_litetalk_description:
+        'Internal scheduling automation tool that transforms raw Excel lesson schedules into structured RTL timetables with business-rule filtering and WhatsApp-ready PNG export. ' +
+        'The system parses spreadsheet data, applies logic such as earliest-hour-per-date selection, and renders a clean, shareable operational view.',
+        projects_litetalk_cta: 'View Project',
         projects_beavermania_description:
         'A Rogue-like game developed as my final project at Shenkar',
 
@@ -310,3 +318,4 @@ langToggle.addEventListener('click', () => {
     const newLang = document.documentElement.lang === 'he' ? 'en' : 'he';
     setLanguage(newLang);
 });
+
