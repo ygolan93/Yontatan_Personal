@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Dojo Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-50">
+    <div data-navbar-page="case-study"></div>
+
+    <main class="px-4 pt-28 pb-16 sm:pt-32 sm:pb-20">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <section id="case-study" class="game-dev-card rounded-2xl p-6 sm:p-8 scroll-mt-28">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300 mb-4" data-i18n="hero_eyebrow">Case Study</p>
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4" data-i18n="hero_title">Audio Dojo - Real-Time Audio Training Platform</h1>
+                <p class="text-lg text-slate-300 leading-relaxed" data-i18n="hero_subtitle">
+                    A system for training musicians to identify audio processing changes like EQ, compression, and effects through interactive listening exercises.
+                </p>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="problem_title">The Problem</h2>
+                <div class="space-y-4 text-slate-300 leading-relaxed">
+                    <p data-i18n="problem_body_1">Musicians and audio students struggle to reliably recognize changes in audio processing such as EQ boosts, compression settings, and effects.</p>
+                    <p data-i18n="problem_body_2">Traditional learning methods rely heavily on theory, with limited practical feedback or structured repetition.</p>
+                </div>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="solution_title">The Solution</h2>
+                <div class="space-y-4 text-slate-300 leading-relaxed">
+                    <p data-i18n="solution_body_1">I built a dynamic quiz engine that generates listening exercises using real audio samples and applies audio processing in real time.</p>
+                    <p data-i18n="solution_body_2">Users compare processed and unprocessed audio, answer structured questions, and receive immediate feedback with a final performance summary.</p>
+                </div>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="architecture_title">System Architecture</h2>
+                <p class="text-slate-300 leading-relaxed mb-4" data-i18n="architecture_intro">The system is built around a modular audio pipeline and a dynamic question generation engine.</p>
+                <ul class="list-disc ps-5 space-y-2 text-slate-300 leading-relaxed">
+                    <li data-i18n="architecture_item_1">Audio Manager handles playback, processing, and PRE/POST comparison</li>
+                    <li data-i18n="architecture_item_2">Question engine generates combinations based on parameters such as frequency and gain</li>
+                    <li data-i18n="architecture_item_3">Firebase stores question banks and enables dynamic updates</li>
+                    <li data-i18n="architecture_item_4">LocalStorage manages session history and results</li>
+                </ul>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="decisions_title">Key Technical Decisions</h2>
+                <ul class="list-disc ps-5 space-y-2 text-slate-300 leading-relaxed">
+                    <li data-i18n="decisions_item_1">Implemented a requestId mechanism to prevent overlapping audio playback bugs during rapid user interaction</li>
+                    <li data-i18n="decisions_item_2">Separated audio processing logic into a dedicated audioManager module for maintainability</li>
+                    <li data-i18n="decisions_item_3">Designed question data as structured JSON to allow scalable quiz generation</li>
+                    <li data-i18n="decisions_item_4">Combined Firebase and localStorage for persistence and performance balance</li>
+                </ul>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="challenges_title">Challenges &amp; Fixes</h2>
+                <div class="space-y-4 text-slate-300 leading-relaxed">
+                    <p data-i18n="challenges_body_1">Handling concurrent audio playback was a major challenge.</p>
+                    <p data-i18n="challenges_body_2">Initially, stopping playback incremented requestId, which caused active playback promises to abort unexpectedly.</p>
+                    <p data-i18n="challenges_body_3">The fix was to decouple stop logic from request tracking, ensuring stable PRE/POST playback behavior.</p>
+                </div>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="features_title">Features</h2>
+                <ul class="list-disc ps-5 space-y-2 text-slate-300 leading-relaxed">
+                    <li data-i18n="features_item_1">Real-time audio processing (EQ, Compression, Reverb, Saturation)</li>
+                    <li data-i18n="features_item_2">Dynamic quiz generation based on selected parameters</li>
+                    <li data-i18n="features_item_3">PRE vs POST listening comparison</li>
+                    <li data-i18n="features_item_4">Final summary with performance breakdown</li>
+                    <li data-i18n="features_item_5">History tracking with export (PDF / Excel)</li>
+                </ul>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="stack_title">Tech Stack</h2>
+                <p class="text-slate-300 leading-relaxed" data-i18n="stack_body">React (Vite), Web Audio API, Firebase (Firestore), LocalStorage</p>
+            </section>
+
+            <section class="game-dev-card rounded-2xl p-6 sm:p-8">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="cta_title">Call To Action</h2>
+                <p class="text-slate-300 leading-relaxed mb-6" data-i18n="cta_body">
+                    Explore the live product to see the listening flow, quiz structure, and audio comparison experience in action.
+                </p>
+                <a
+                    href="https://audiodojo.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-slate-900/60 border border-cyan-400/70 text-white font-medium py-3 px-6 rounded-lg transition inline-flex items-center justify-center hover:border-cyan-300 lang-glow"
+                    data-i18n="cta_button">
+                    Try the Live Demo
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <script src="navbar.js"></script>
+    <script>
+        const translations = {
+            he: {
+                page_title: "Audio Dojo – מקרה בוחן",
+                hero_about: "אודות",
+                hero_projects: "פרויקטים",
+                hero_skills: "כישורים",
+                hero_contact: "יצירת קשר",
+                hero_eyebrow: "מקרה בוחן",
+                hero_title: "Audio Dojo – פלטפורמת אימון שמיעה בזמן אמת",
+                hero_subtitle: "מערכת לאימון מוזיקאים בזיהוי שינויים בעיבוד אודיו כמו EQ, קומפרסיה ואפקטים באמצעות תרגילי האזנה אינטראקטיביים.",
+                problem_title: "הבעיה",
+                problem_body_1: "למוזיקאים ולסטודנטים לסאונד קשה לזהות בצורה עקבית שינויים בעיבוד אודיו כמו הגברות EQ, הגדרות קומפרסיה ואפקטים.",
+                problem_body_2: "שיטות לימוד מסורתיות נשענות בעיקר על תיאוריה, עם מעט פידבק מעשי וחזרתיות מובנית.",
+                solution_title: "הפתרון",
+                solution_body_1: "פיתחתי מנוע חידונים דינמי שמייצר תרגילי האזנה על בסיס דגימות אודיו אמיתיות ומיישם עיבוד אודיו בזמן אמת.",
+                solution_body_2: "המשתמשים משווים בין אודיו מעובד ולא מעובד, עונים על שאלות מובנות, ומקבלים פידבק מיידי לצד סיכום ביצועים בסוף הסשן.",
+                architecture_title: "ארכיטקטורת המערכת",
+                architecture_intro: "המערכת בנויה סביב pipeline מודולרי לעיבוד אודיו ומנוע דינמי ליצירת שאלות.",
+                architecture_item_1: "Audio Manager אחראי על ניגון, עיבוד, והשוואת PRE/POST",
+                architecture_item_2: "מנוע השאלות מייצר קומבינציות על בסיס פרמטרים כמו תדר ו-gain",
+                architecture_item_3: "Firebase שומר את מאגרי השאלות ומאפשר עדכונים דינמיים",
+                architecture_item_4: "LocalStorage מנהל היסטוריית סשנים ותוצאות",
+                decisions_title: "החלטות טכניות מרכזיות",
+                decisions_item_1: "מימשתי מנגנון requestId כדי למנוע באגים של ניגון אודיו חופף בזמן אינטראקציה מהירה",
+                decisions_item_2: "הפרדתי את לוגיקת עיבוד האודיו למודול audioManager ייעודי לצורך תחזוקתיות",
+                decisions_item_3: "תכננתי את נתוני השאלות כ-JSON מובנה כדי לאפשר יצירת חידונים סקיילבילית",
+                decisions_item_4: "שילבתי בין Firebase ל-localStorage כדי לאזן בין התמדה בבסיס הנתונים לבין ביצועים",
+                challenges_title: "אתגרים ותיקונים",
+                challenges_body_1: "טיפול בניגון אודיו מקביל היה אתגר מרכזי.",
+                challenges_body_2: "בהתחלה, עצירת הניגון הגדילה את requestId, מה שגרם ל-promises של ניגון פעיל להיעצר באופן לא צפוי.",
+                challenges_body_3: "התיקון היה להפריד בין לוגיקת העצירה לבין מעקב ה-request, וכך לייצב את התנהגות ה-PRE/POST.",
+                features_title: "יכולות עיקריות",
+                features_item_1: "עיבוד אודיו בזמן אמת (EQ, קומפרסיה, Reverb, Saturation)",
+                features_item_2: "יצירת חידונים דינמית לפי פרמטרים נבחרים",
+                features_item_3: "השוואת האזנה בין PRE ל-POST",
+                features_item_4: "סיכום סופי עם פירוט ביצועים",
+                features_item_5: "מעקב היסטוריה עם ייצוא ל-PDF / Excel",
+                stack_title: "טכנולוגיות",
+                stack_body: "React (Vite), Web Audio API, Firebase (Firestore), LocalStorage",
+                cta_title: "לנסות את המוצר",
+                cta_body: "אפשר להיכנס לדמו החי כדי לראות את זרימת ההאזנה, מבנה החידון וחוויית השוואת האודיו בפעולה.",
+                cta_button: "נסו את הדמו החי"
+            },
+            en: {
+                page_title: "Audio Dojo Case Study",
+                hero_about: "About",
+                hero_projects: "Projects",
+                hero_skills: "Skills",
+                hero_contact: "Contact",
+                hero_eyebrow: "Case Study",
+                hero_title: "Audio Dojo - Real-Time Audio Training Platform",
+                hero_subtitle: "A system for training musicians to identify audio processing changes like EQ, compression, and effects through interactive listening exercises.",
+                problem_title: "The Problem",
+                problem_body_1: "Musicians and audio students struggle to reliably recognize changes in audio processing such as EQ boosts, compression settings, and effects.",
+                problem_body_2: "Traditional learning methods rely heavily on theory, with limited practical feedback or structured repetition.",
+                solution_title: "The Solution",
+                solution_body_1: "I built a dynamic quiz engine that generates listening exercises using real audio samples and applies audio processing in real time.",
+                solution_body_2: "Users compare processed and unprocessed audio, answer structured questions, and receive immediate feedback with a final performance summary.",
+                architecture_title: "System Architecture",
+                architecture_intro: "The system is built around a modular audio pipeline and a dynamic question generation engine.",
+                architecture_item_1: "Audio Manager handles playback, processing, and PRE/POST comparison",
+                architecture_item_2: "Question engine generates combinations based on parameters such as frequency and gain",
+                architecture_item_3: "Firebase stores question banks and enables dynamic updates",
+                architecture_item_4: "LocalStorage manages session history and results",
+                decisions_title: "Key Technical Decisions",
+                decisions_item_1: "Implemented a requestId mechanism to prevent overlapping audio playback bugs during rapid user interaction",
+                decisions_item_2: "Separated audio processing logic into a dedicated audioManager module for maintainability",
+                decisions_item_3: "Designed question data as structured JSON to allow scalable quiz generation",
+                decisions_item_4: "Combined Firebase and localStorage for persistence and performance balance",
+                challenges_title: "Challenges &amp; Fixes",
+                challenges_body_1: "Handling concurrent audio playback was a major challenge.",
+                challenges_body_2: "Initially, stopping playback incremented requestId, which caused active playback promises to abort unexpectedly.",
+                challenges_body_3: "The fix was to decouple stop logic from request tracking, ensuring stable PRE/POST playback behavior.",
+                features_title: "Features",
+                features_item_1: "Real-time audio processing (EQ, Compression, Reverb, Saturation)",
+                features_item_2: "Dynamic quiz generation based on selected parameters",
+                features_item_3: "PRE vs POST listening comparison",
+                features_item_4: "Final summary with performance breakdown",
+                features_item_5: "History tracking with export (PDF / Excel)",
+                stack_title: "Tech Stack",
+                stack_body: "React (Vite), Web Audio API, Firebase (Firestore), LocalStorage",
+                cta_title: "Call To Action",
+                cta_body: "Explore the live product to see the listening flow, quiz structure, and audio comparison experience in action.",
+                cta_button: "Try the Live Demo"
+            }
+        };
+
+        window.SharedI18n.init({ translations, defaultLang: "en" });
+    </script>
+</body>
+</html>
